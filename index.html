@@ -1179,6 +1179,244 @@
   .order-success .success-icon { font-size: 3rem; margin-bottom: 12px; }
   .order-success h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px; }
   .order-success p { font-size: 0.85rem; color: var(--wood-400); line-height: 1.6; }
+
+  /* ── MULTI PAGE MODE ADDED FOR SINGLE HTML WEBSITE ───────────────── */
+  body.page-mode section { display: none !important; }
+  body.page-mode section.page-visible { display: block !important; }
+  body.page-mode #hero.page-visible { display: flex !important; }
+  body.page-mode #stats.page-visible,
+  body.page-mode #pricing.page-visible,
+  body.page-mode #partners.page-visible { display: block !important; }
+  body.page-mode .marquee-section { display: none !important; }
+  body.page-mode.page-home .marquee-section { display: block !important; }
+  body.page-mode main, body.page-mode .page-shell { min-height: 72vh; }
+
+  .nav-links a.active {
+    color: var(--wood-700);
+    font-weight: 700;
+    position: relative;
+  }
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    border-radius: 4px;
+    background: linear-gradient(90deg,var(--wood-500),var(--wood-300));
+  }
+
+  .aido-logo-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .aido-logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg,#062A3F,#0A84FF);
+    padding: 5px;
+    box-shadow: 0 8px 26px rgba(10,132,255,0.18);
+  }
+  .aido-logo-lockup .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--wood-dark);
+    letter-spacing: -0.03em;
+  }
+  .aido-logo-lockup .logo-text span { color: var(--wood-500); }
+
+  .page-hero-note {
+    margin-top: 90px;
+    margin-bottom: -50px;
+    text-align: center;
+    color: var(--text-light);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Blog page */
+  #blog {
+    background: var(--wood-50);
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 42px;
+  }
+  .blog-card {
+    background: #fff;
+    border: 1px solid var(--wood-200);
+    border-radius: 22px;
+    padding: 26px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+  }
+  .blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--wood-300);
+  }
+  .blog-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    background: var(--wood-100);
+    color: var(--wood-700);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.07em;
+    margin-bottom: 18px;
+  }
+  .blog-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+  .blog-card p {
+    color: var(--text-mid);
+    line-height: 1.65;
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+  .blog-read {
+    color: var(--wood-600);
+    font-weight: 700;
+    font-size: 0.88rem;
+  }
+
+  /* Dashboard page */
+  #dashboard {
+    background: linear-gradient(160deg,var(--wood-50),#fff 44%,var(--wood-100));
+  }
+  .dashboard-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 34px;
+    align-items: center;
+    margin-top: 42px;
+  }
+  .dashboard-copy-card {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid var(--wood-200);
+    border-radius: 24px;
+    padding: 34px;
+    box-shadow: var(--shadow-card);
+  }
+  .dashboard-mini {
+    background: white;
+    border: 1px solid var(--wood-200);
+    border-radius: 28px;
+    padding: 18px;
+    box-shadow: 0 22px 70px rgba(61,36,8,0.14);
+  }
+  .dash-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px 18px;
+  }
+  .dash-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--wood-600);
+    letter-spacing: 0.08em;
+  }
+  .dash-pill {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    border-radius: 100px;
+    color: var(--wood-700);
+    background: var(--wood-100);
+  }
+  .dash-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .dash-card {
+    background: var(--wood-50);
+    border: 1px solid var(--wood-100);
+    border-radius: 16px;
+    padding: 16px;
+  }
+  .dash-label {
+    font-size: 0.68rem;
+    color: var(--text-light);
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .dash-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--wood-700);
+    margin-top: 6px;
+  }
+  .dash-panels {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 12px;
+  }
+  .dash-panel {
+    min-height: 190px;
+    background: var(--wood-50);
+    border: 1px solid var(--wood-100);
+    border-radius: 18px;
+    padding: 16px;
+  }
+  .fake-chart {
+    height: 118px;
+    margin-top: 18px;
+    border-radius: 14px;
+    background:
+      linear-gradient(transparent 24%, rgba(196,149,85,.14) 25%, transparent 26%),
+      linear-gradient(90deg, transparent 24%, rgba(196,149,85,.14) 25%, transparent 26%),
+      linear-gradient(135deg, rgba(176,124,58,.12), rgba(196,149,85,.04));
+    background-size: 100% 32px, 42px 100%, 100% 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .fake-chart::after {
+    content:'';
+    position:absolute;
+    left:18px; right:18px; top:58px;
+    height:4px;
+    border-radius:30px;
+    background: linear-gradient(90deg,var(--wood-300),var(--wood-500),var(--wood-200));
+    transform: rotate(-7deg);
+    box-shadow: 34px -18px 0 -1px var(--wood-400), 78px 8px 0 -1px var(--wood-300), 128px -20px 0 -1px var(--wood-500);
+  }
+  .status-row {
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0;
+    border-bottom:1px solid var(--wood-100);
+    color:var(--text-mid);
+    font-size:0.85rem;
+  }
+  .status-dot {
+    width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:8px;background:#4ade80;
+  }
+  .status-dot.warn { background:#f59e0b; }
+  .status-dot.danger { background:#ef4444; }
+
+  @media(max-width:900px){
+    .blog-grid { grid-template-columns: 1fr; }
+    .dashboard-layout { grid-template-columns: 1fr; }
+    .dash-cards, .dash-panels { grid-template-columns: 1fr; }
+    .aido-logo-lockup .logo-text { font-size: 1.25rem; }
+    .aido-logo-icon { width: 36px; height: 36px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1197,19 +1435,37 @@
 
 <!-- ── NAVBAR ─────────────────────────────────────── -->
 <nav id="navbar">
-  <div class="nav-logo">Ai<span>Do</span>Bot</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#journey">How It Works</a></li>
-    <li><a href="#usecases">Use Cases</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#video-reviews">Reviews</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <a class="nav-logo aido-logo-lockup" href="#home" onclick="showPage('home'); return false;" aria-label="AiDoBot Home">
+    <svg class="aido-logo-icon" viewBox="0 0 64 64" role="img" aria-hidden="true">
+      <defs>
+        <linearGradient id="aidoLogoGrad" x1="8" y1="8" x2="56" y2="56">
+          <stop offset="0" stop-color="#0A84FF"/>
+          <stop offset="0.55" stop-color="#20C7D9"/>
+          <stop offset="1" stop-color="#18A058"/>
+        </linearGradient>
+      </defs>
+      <circle cx="32" cy="32" r="28" fill="none" stroke="url(#aidoLogoGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="128 38"/>
+      <rect x="24" y="10" width="16" height="44" rx="6" fill="#ffffff" opacity="0.98"/>
+      <rect x="10" y="24" width="44" height="16" rx="6" fill="#ffffff" opacity="0.98"/>
+      <path d="M13 33h11l4-12 8 25 5-13h10" fill="none" stroke="#0A84FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="51" cy="16" r="5" fill="#ffffff" stroke="#20C7D9" stroke-width="3"/>
+    </svg>
+    <span class="logo-text">Ai<span>Do</span>Bot</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" data-page="home" onclick="showPage('home'); return false;">Home</a></li>
+    <li><a href="#about" data-page="about" onclick="showPage('about'); return false;">About</a></li>
+    <li><a href="#journey" data-page="journey" onclick="showPage('journey'); return false;">How It Works</a></li>
+    <li><a href="#usecases" data-page="usecases" onclick="showPage('usecases'); return false;">Use Cases</a></li>
+    <li><a href="#gallery" data-page="gallery" onclick="showPage('gallery'); return false;">Gallery</a></li>
+    <li><a href="#reviews" data-page="reviews" onclick="showPage('reviews'); return false;">Reviews</a></li>
+    <li><a href="#products" data-page="products" onclick="showPage('products'); return false;">Products</a></li>
+    <li><a href="#blog" data-page="blog" onclick="showPage('blog'); return false;">Blog</a></li>
+    <li><a href="#dashboard" data-page="dashboard" onclick="showPage('dashboard'); return false;">Dashboard</a></li>
+    <li><a href="#contact" data-page="contact" onclick="showPage('contact'); return false;">Contact</a></li>
   </ul>
   <div class="nav-cta">
-    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Demo</button>
+    <button class="btn btn-primary" onclick="showPage('contact')">Request a Demo</button>
   </div>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -1224,8 +1480,8 @@
       <h1 class="hero-title">Healthcare that <em>comes to you.</em></h1>
       <p class="hero-sub">AiDoBot checks your vitals, speaks your language, connects you with a doctor, and arranges your medicine — anywhere in the world.</p>
       <div class="hero-actions">
-        <button class="btn btn-primary" onclick="document.getElementById('journey').scrollIntoView({behavior:'smooth'})">See How It Works →</button>
-        <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Demo</button>
+        <button class="btn btn-primary" onclick="showPage('journey')">See How It Works →</button>
+        <button class="btn btn-outline" onclick="showPage('contact')">Request a Demo</button>
       </div>
       <div class="hero-vitals" id="hero-vitals">
         <div class="vital-card"><div class="vital-icon">❤️</div><div class="vital-label">Heart Rate</div><div class="vital-value">72 bpm</div></div>
@@ -1301,7 +1557,7 @@
           <div class="feature-item"><div class="feature-check">✓</div><div class="feature-text">Digital prescriptions and medicine home delivery</div></div>
         </div>
         <div style="margin-top:28px">
-          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Demo →</button>
+          <button class="btn btn-primary" onclick="showPage('contact')">Request a Demo →</button>
         </div>
       </div>
     </div>
@@ -1705,34 +1961,43 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Ai<span>Do</span>Bot</div>
+        <div class="footer-logo aido-logo-lockup">
+          <svg class="aido-logo-icon" viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="none" stroke="#c49555" stroke-width="4" stroke-linecap="round" stroke-dasharray="128 38"/>
+            <rect x="24" y="10" width="16" height="44" rx="6" fill="#f5e9d5"/>
+            <rect x="10" y="24" width="44" height="16" rx="6" fill="#f5e9d5"/>
+            <path d="M13 33h11l4-12 8 25 5-13h10" fill="none" stroke="#8f6028" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="51" cy="16" r="5" fill="#3d2408" stroke="#d4b07a" stroke-width="3"/>
+          </svg>
+          <span class="logo-text">Ai<span>Do</span>Bot</span>
+        </div>
         <p class="footer-desc">AI-powered healthcare that reaches everyone — hospitals, communities, homes, and public spaces. Speaking your language. Saving lives.</p>
       </div>
       <div class="footer-col">
-        <h4>Product</h4>
-        <a href="#journey">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#usecases">Use Cases</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#events">Events</a>
+        <h4>Website Pages</h4>
+        <a href="#home" onclick="showPage('home'); return false;">Home</a>
+        <a href="#products" onclick="showPage('products'); return false;">Products</a>
+        <a href="#dashboard" onclick="showPage('dashboard'); return false;">Dashboard</a>
+        <a href="#blog" onclick="showPage('blog'); return false;">Blog</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="#about">About Us</a>
-        <a href="#team">Our Team</a>
-        <a href="#partners">Partners</a>
-        <a href="#video-reviews">Reviews</a>
+        <a href="#about" onclick="showPage('about'); return false;">About Us</a>
+        <a href="#journey" onclick="showPage('journey'); return false;">How It Works</a>
+        <a href="#usecases" onclick="showPage('usecases'); return false;">Use Cases</a>
+        <a href="#reviews" onclick="showPage('reviews'); return false;">Reviews</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="mailto:hello@aidoBot.com">hello@aidoBot.com</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#contact" onclick="showPage('contact'); return false;">Request Demo</a>
+        <a href="#contact" onclick="showPage('contact'); return false;">Privacy Policy</a>
+        <a href="#contact" onclick="showPage('contact'); return false;">Terms of Service</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 AiDoBot. All rights reserved. — AiDoBot Technologies</div>
-      <div class="footer-copy">Designed for the world.</div>
+      <div class="footer-copy">Designed for healthcare innovation.</div>
     </div>
   </div>
 </footer>
@@ -4507,7 +4772,80 @@ function refreshProductImagePreviews() {
   });
 }
 
+
+/* ── SINGLE HTML PAGE ROUTER ADDED ─────────────────────────
+   This keeps the website in one HTML file, but gives each major part
+   a direct page-like view through the navbar and URL hash.
+*/
+const AIDO_PAGE_MAP = {
+  home:      ['hero','stats'],
+  about:     ['about','team','partners','social'],
+  journey:   ['journey'],
+  usecases:  ['usecases'],
+  gallery:   ['gallery'],
+  reviews:   ['reviews','video-reviews'],
+  products:  ['pricing'],
+  blog:      ['blog','events','announcements'],
+  dashboard: ['dashboard'],
+  contact:   ['contact']
+};
+
+const AIDO_PAGE_ALIASES = {
+  pricing: 'products',
+  product: 'products',
+  products: 'products',
+  video_reviews: 'reviews',
+  'video-reviews': 'reviews',
+  events: 'blog',
+  announcements: 'blog',
+  team: 'about',
+  partners: 'about',
+  social: 'about'
+};
+
+function normalizeAidoPage(page) {
+  const clean = (page || 'home').replace('#','').trim();
+  return AIDO_PAGE_MAP[clean] ? clean : (AIDO_PAGE_ALIASES[clean] || 'home');
+}
+
+function showPage(page, updateHash = true) {
+  const selectedPage = normalizeAidoPage(page);
+  document.body.classList.add('page-mode');
+
+  Object.keys(AIDO_PAGE_MAP).forEach(key => {
+    document.body.classList.remove('page-' + key);
+  });
+  document.body.classList.add('page-' + selectedPage);
+
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.remove('page-visible');
+  });
+
+  AIDO_PAGE_MAP[selectedPage].forEach(id => {
+    const section = document.getElementById(id);
+    if(section) section.classList.add('page-visible');
+  });
+
+  document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+    link.classList.toggle('active', link.dataset.page === selectedPage);
+  });
+
+  if(updateHash && location.hash !== '#' + selectedPage) {
+    history.pushState(null, '', '#' + selectedPage);
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const initialPage = normalizeAidoPage(location.hash || 'home');
+  showPage(initialPage, false);
+});
+
+window.addEventListener('hashchange', () => {
+  showPage(location.hash || 'home', false);
+});
+
 </script>
 </body>
 </html>
-
